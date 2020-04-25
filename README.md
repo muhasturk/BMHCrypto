@@ -17,7 +17,7 @@
 BMHCrypto is a pure Swift packages built on CryptoKit, adds useful extensions and ready to use.
 
 ### Why?
-Pure Swift, I am not gonna reinvent the wheel, package always be based on CryptoKit or whatever released by Apple.
+Simplify usage of cryptographic operation such as hashing, encryption / decryption. Pure Swift, I am not gonna reinvent the wheel, package always will be based on CryptoKit or whatever released by Apple.
 
 ## 📋 Requirements
 
@@ -71,6 +71,28 @@ let package = Package(
 
 <p>Then run <code>swift package update</code>.</p>
 </details>
+
+## 🎁 Features
+
+- Insecure Hash
+    - [x] MD5
+    - [x] SHA1
+    > **_Important:_**  These algorithms aren’t considered cryptographically secure, but are provided for backward compatibility with older services that require them. For new services, avoid these algorithms.
+
+- Cryptographically Secure Hashes
+    - [x] SHA256
+    - [x] SHA384
+    - [x] SHA512
+
+- Ciphers
+    - [x] AES
+    - [x] ChaChaPoly
+
+- Message Authentication Codes
+    - [ ] HMAC
+    - [x] SymmetricKey
+
+- [ ] Public-Key Cryptography
 
 ## 🔥 Usage
 Do not forget to import
@@ -135,27 +157,6 @@ let savedKey = key.base64EncodedString
 // Ready to Use SymmetricKey
 let convertedKey = savedKey.asSymmetricKey
 ```
-## 🎁 Features
-
-- Insecure Hash
-    - [x] MD5
-    - [x] SHA1
-    > **_Important:_**  These algorithms aren’t considered cryptographically secure, but are provided for backward compatibility with older services that require them. For new services, avoid these algorithms.
-
-- Cryptographically Secure Hashes
-    - [x] SHA256
-    - [x] SHA384
-    - [x] SHA512
-
-- Ciphers
-    - [x] AES
-    - [x] ChaChaPoly
-
-- Message Authentication Codes
-    - [ ] HMAC
-    - [x] SymmetricKey
-
-- [ ] Public-Key Cryptography
 
 ## 👨🏻‍💻 Author
 Mustafa Hasturk
