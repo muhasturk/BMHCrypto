@@ -13,6 +13,14 @@ public extension ContiguousBytes {
     var base64EncodedString: String {
         return self.withUnsafeBytes { Data(Array($0)).base64EncodedString() }
     }
+
+    var data: Data {
+        return self.withUnsafeBytes { Data($0) }
+    }
+
+    var byteArray: [UInt8] {
+        return self.withUnsafeBytes { Array($0) }
+    }
 }
 
 public extension String {
